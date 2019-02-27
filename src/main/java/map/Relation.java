@@ -113,8 +113,8 @@ public class Relation {
 	 */
 	public static void generateDeviceAndRuntime() throws Exception {
 		// 底层设备生成 返回一个运行时对象
-//		AirCondition gree = (AirCondition) generate(Gree.class.getName());
-//		AirCondition panasonic = (AirCondition) generate(Panasonic.class.getName());
+		AirCondition gree = (AirCondition) generate(Gree.class.getName());
+		AirCondition panasonic = (AirCondition) generate(Panasonic.class.getName());
 ////
 //		Light midea = (Light) generate(Midea.class.getName());
 //		Light opple = (Light) generate(Opple.class.getName());
@@ -124,9 +124,9 @@ public class Relation {
 
 		// 运行时对象调用
 
-//		gree.cool();
-//		panasonic.cool();
-////
+		gree.cool();
+		panasonic.cool();
+
 //		midea.illumine();
 //		opple.illumine();
 //		midea.darken();
