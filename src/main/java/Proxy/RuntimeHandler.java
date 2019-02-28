@@ -53,11 +53,13 @@ public class RuntimeHandler implements InvocationHandler {
 	    
 		// 获取运行时对象中type的值 来得到对应的底层设备名
 		Field type = obj.getClass().getDeclaredField("type");
+		
 		type.setAccessible(true);
 		String deviceTypeName = (String) type.get(obj);
 
 		// 运行时对象方法调用 映射到 底层设备的api
 		for (String k : Relation.apiMaps.keySet()) {
+//			System.out.println(method.getDeclaringClass().getName());
 			if (k.equals(method.getDeclaringClass().getName() + "." + method.getName())) {
 				List<String> candidateMethods = Relation.apiMaps.get(k);
 				for (int i = 0; i < candidateMethods.size(); i++) {
@@ -86,7 +88,7 @@ public class RuntimeHandler implements InvocationHandler {
 	}
 	
 	public static void write(Object o,String MName) throws IOException {
-		System.out.println(o);
+//		System.out.println(o);
 		String data =o.toString();
 	    File file =new File(MName+".txt");
 	    if(!file.exists()){

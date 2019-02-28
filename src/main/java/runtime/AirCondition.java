@@ -11,5 +11,8 @@ public interface AirCondition {
     
 	void setT(float temperature);
 	float getT();
+	
+	void setID(String ID);
+	String getID();
     
 }

@@ -13,6 +13,7 @@ public class ProxyUtils {
 
     //运行时对象的代理
     public static Object getProxy(Object obj) {
+    	
         return Proxy.newProxyInstance(obj.getClass().getClassLoader(),
                 obj.getClass().getInterfaces(),
                 new RuntimeHandler(obj));

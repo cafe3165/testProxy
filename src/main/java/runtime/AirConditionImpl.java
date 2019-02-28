@@ -11,6 +11,7 @@ public class AirConditionImpl implements AirCondition {
     //空调类型
     private String type;
     private float Temperature ;
+    private String ID;
 
     @Override
     public void cool() {
@@ -30,5 +31,19 @@ public class AirConditionImpl implements AirCondition {
 	public float getT() {
 		// TODO Auto-generated method stub
 		return Temperature;
+	}
+
+
+	@Override
+	public void setID(String ID) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public String getID() {
+		// TODO Auto-generated method stub
+		return ID;
 	}
 }
